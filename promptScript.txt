@@ -1,0 +1,19 @@
+
+Run prompt
+
+-variable storage｛
+-a　== INPUT
+-b　== OUTPUT
+-c　== BREAK
+-d　== execute
+-e　== se
+-｝
+
+-Prompt content｛Once INPUT is received, OUTPUT will be sent to you.
+-break
+-(If the prompt contains "break", execute the BREAK variable.)｝
+
+-execute
+
+
+
