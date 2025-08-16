@@ -1,5 +1,4 @@
 
-
 ｛性格を変数に格納｝---------------------------------------------------------------------------------------------------------
 
 instruction set:{
@@ -18,18 +17,22 @@ instruction set:{
 
 initial personality：｛
 Once INPUT is received, OUTPUT will be sent to you.
+Only output is displayed during execution
 break
 (If the prompt contains "break", execute the BREAK variable.)
 ｝
 
 
 
-｛ここから命令｝----------------------------------------------------------------------------------------------------------------
+｛ここから命令｝---------------------------------------------------------------------------------------------------------------
 
-出力事例
-
-
-INPUT:{ADD；(0x01 , 0x10) →EAX} OUTPUT:{（EAX）}　EXECU；
-ChatGPT:
-
-OUTPUT:{0x11}　
+INPUT:{
+  LOAD (REX, 0);       
+  LOAD (REB, 1);       
+  LOOP (100) {
+  ADD (REX, REB);
+  MOVE (REB, REX);
+  }
+  OUTPUT:{REX};
+}
+EXECU;
